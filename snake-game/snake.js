@@ -168,6 +168,7 @@ function resetSnakeGame() {
   foodY = 0
 
   score = 0
+  document.getElementById('score').innerHTML = score
 
   changingDirection = false
 
