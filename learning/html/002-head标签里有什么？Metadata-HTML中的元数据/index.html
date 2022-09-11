@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>&lt;title&gt;在这里显示</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="my-css-file.css" rel="stylesheet">
+    <script src="my-javascript-file.js" defer></script>
+  </head>
+  <body>
+    <h1>什么是 HTML &lt;head&gt;？标签&lt;h1&gt; 在这里显示</h1>
+    <p>保存不在页面上显示的元数据。</p>
+
+    <hr>
+
+    <h1>添加标题</h1>
+    <p>
+      &lt;title&gt; 元素内容会出现在：
+      <ul>
+        <li>添加书签时的建议 name。</li>
+        <li>搜索结果中。</li>
+      </ul>
+    </p>
+
+    <hr>
+
+    <h1>元数据：&lt;meta&gt; 元素</h1>
+    <h2>指定文档中的字符编码。</h2>
+    <h2>添加作者和描述</h2>
+    <p>
+      <pre>
+        &lt;meta name="author" content="Chris Mills"&gt;
+        &lt;meta name="description" content="The MDN Web Docs Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications."&gt;
+      </pre>
+      这些在 SEO 中非常有用。
+    </p>
+    <h2>其他类型的元数据</h2>
+    <p>面对 Facebook，Twitter 等社交网站，可以为网站添加其相对应的专有元数据。</p>
+
+    <hr>
+    
+    <h1>在你的站点增加自定义图标</h1>
+    <p>大小通常为 16x16。</p>
+    <p>典型用法</p>
+    <pre>
+      &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+    </pre>
+
+    <hr>
+
+    <h1>在 HTML 中应用 CSS 和 JavaScript</h1>
+    <ul>
+      <li>CSS 让网站更酷炫。</li>
+      <pre>
+        &lt;link rel="stylesheet" href="my-css-file.css"&gt;
+      </pre>
+      <li>JS 让网站具备交互功能。</li>
+      <pre>
+        &lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;
+        加上 defer 以告诉浏览器最后再加载 JavaScript。 
+      </pre>
+    </ul>
+
+    <hr>
+
+    <h1>实践操作：在网页中应用 CSS 和 JavaScript</h1>
+
+    <hr>
+
+    <h1>为文档设置主语言</h1>
+    <p>可以但没必要。SEO，视障人士。</p>
+    <p>为部分内容设置语言。</p>
+    <pre>
+      &lt;p&gt;Japanese example: &lt;span lang="ja"&gt;ご飯が熱い。&lt;/span&gt;.&lt;/p&gt;
+    </pre>
+    <p>详见<a href="https://www.w3.org/International/articles/language-tags/">Language tags in HTML and XML</a>。</p>
+
+  </body> 
+</html>

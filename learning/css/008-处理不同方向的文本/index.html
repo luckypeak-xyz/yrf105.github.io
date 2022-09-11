@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>处理不同方向的文本</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <p>了解书写模式对现代 CSS 的重要性。</p>
+  <h2>什么是书写模式</h2>
+    <p>书写模式就是指文本的排列方向是横向还是纵向的。</p>
+    <p>可以通过 writing-mode 属性来切换书写模式：</p>
+    <ul>
+      <li>horizontal-tb: 块流向从上至下。对应的文本方向是横向的。</li>
+      <li>vertical-rl: 块流向从右向左。对应的文本方向是纵向的。</li>
+      <li>vertical-lr: 块流向从左向右。对应的文本方向是纵向的。</li>
+    </ul>
+  <hr>
+  <h2>书写模式，块布局和内联布局</h2>
+    <p>水平书写模式下的两种维度：</p>
+    <img src="images/horizontal-tb.png" alt="">
+    <p>纵向书写模式下的两种维度：</p>
+    <img src="images/vertical.png" alt="">
+  <hr>
+  <h2>逻辑属性和逻辑值</h2>
+    <p>物理属性 width 对应逻辑属性 inline-size。</p>
+    <p>物理属性 height 对应逻辑属性 block-size。</p>
+    <h3>逻辑外边距，边框和内边距属性</h3>
+    <p>物理属性 margin-top 对应逻辑属性 margin-block-start。</p>
+    <p>物理属性 padding-left 对应逻辑属性 padding-inline-start。</p>
+    <p>......</p>
+    <h3>逻辑值</h3>
+    <p>物理值 top 对应逻辑值 block-start。</p>
+    <p>物理值 left 对应逻辑值 inline-start。</p>
+    <p>......</p>
+  </body>
+</html>

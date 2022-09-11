@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>背景与边框</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>背景与边框</h1>
+  <p>学习如何在盒模型中使用背景和边框。</p>
+  <h2>CSS 的背景样式</h2>
+  <h3>背景颜色</h3>
+  <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxWNRKZ" data-user="wddxrw"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/wddxrw/pen/xxWNRKZ">
+        css-背景颜色</a> by yrf (<a href="https://codepen.io/wddxrw">@wddxrw</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <h3>背景图片</h3>
+  <p>默认情况下，大图不会缩小以适应方框，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。</p>
+  <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="VwXOmLb" data-user="wddxrw"
+    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+    <span>See the Pen <a href="https://codepen.io/wddxrw/pen/VwXOmLb">
+        css-背景图片</a> by yrf (<a href="https://codepen.io/wddxrw">@wddxrw</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <p>控制背景平铺</p>
+  <ul>
+    <li>no-repeat — 不重复。</li>
+    <li>repeat-x —水平重复。</li>
+    <li>repeat-y —垂直重复。</li>
+    <li>repeat — 在两个方向重复。</li>
+  </ul>
+  <p>调整背景图像的大小</p>
+  <ul>
+    <li>cover —浏览器将使图像足够大，使它完全覆盖了盒子区，同时仍然保持其高宽比。在这种情况下，有些图像可能会跳出盒子外。</li>
+    <li>contain — 浏览器将使图像的大小适合盒子内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则可能在图像的任何一边或顶部和底部出现间隙。</li>
+  </ul>
+  <p>背景图片定位</p>
+  <p>盒子的左上角是 (0,0)，框沿着水平 (x) 和垂直 (y) 轴定位</p>
+  <code>
+    <pre>
+      .box {
+      background-image: url(star.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      background-image: url(star.png);
+      background-repeat: no-repeat;
+      background-position: 20px 10%;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      background-image: url(star.png);
+      background-repeat: no-repeat;
+      background-position: top 20px;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      background-image: url(star.png);
+      background-repeat: no-repeat;
+      background-position: top 20px right 10px;
+      }
+    </pre>
+  </code>
+  <p>渐变背景</p>
+  <p>在<a href="https://cssgradient.io/">这里</a>生成渐变背景。</p>
+  <p>多个图片背景</p>
+  <code>
+    <pre>
+      background-image: url(image1.png), url(image2.png), url(image3.png), url(image4.png);
+      background-repeat: no-repeat, repeat-x, repeat;
+      background-position: 10px 20px, top right;
+    </pre>
+  </code>
+  <p>背景附加</p>
+  <p>background-attachment</p>
+  <ul>
+    <li>scroll：页面滚动背景也滚动，元素滚动背景不动</li>
+    <li>fixed：无论如何都不动</li>
+    <li>local：页面滚动背景也滚动，元素滚动背景也滚动</li>
+  </ul>
+  <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html">形象的示例</a>
+  <p>使用 background 的简写。</p>
+  <hr>
+
+  <h2>边框</h2>
+  <code>
+    <pre>
+      .box {
+      border: 1px solid black;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      border-top: 1px solid black;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      border-width: 1px;
+      border-style: solid;
+      border-color: black;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: black;
+      }
+    </pre>
+  </code>
+  <h3>圆角</h3>
+  <code>
+    <pre>
+      .box {
+      border-radius: 10px;
+      }
+    </pre>
+  </code>
+  <code>
+    <pre>
+      .box {
+      border-top-right-radius: 1em 10%; /*第一个为水平半径，第二个为垂直半径*/
+      }
+    </pre>
+  </code>
+</body>
+
+</html>

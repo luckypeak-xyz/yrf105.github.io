@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>视频和音频内容</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <h1>视频和音频内容</h1>
+    <h2>web 中视频与音频</h2>
+    <h3>&lt;video&gt;元素</h3>
+    <video src="videos/rabbit320.webm" height="333" controls> 
+      <p>浏览器不支持 HTML5 点击<a href="https://www.bilibili.com/video/BV15z411z73U?vd_source=f4401048ee4b39b8dd98b24e73893b55">iu 顶级现场</a>观看</p> 
+    </video>
+    <h3>使用多个播放源以提高兼容性</h3>
+    <p>因为并不是所有的格式浏览器都支持。</p>
+    <h3>其他属性</h3>
+    <ul>
+      <li>&lt;width&gt;&lt;height&gt;</li>
+      <li>&lt;autoplay&gt;</li>
+      <li>&lt;loop&gt;</li>
+      <li>&lt;muted&gt;</li>
+      <li>&lt;poster&gt;</li>
+      <li>&lt;preload&gt;</li>
+    </ul>
+
+    <hr>
+
+    <h2>&lt;audio&gt;</h2>
+    <p>几乎与上面相同。</p>
+
+    <h3>重新播放媒体</h3>
+    <code><pre>
+      const mediaElem = document.getElementById("my-media-element");
+      mediaElem.load();
+    </pre></code>
+    <h3>音轨增删事件</h3>
+    <code><pre>
+      const mediaElem = document.querySelector("video");
+      mediaElem.audioTracks.onaddtrack = function(event) {
+        audioTrackAdded(event.track);
+      }
+    </pre></code>
+    <h3>显示音轨文本</h3>
+    <p>音轨文本的格式为 WebVTT，后缀为 .vtt，使用 &lt;track&gt; 标签引用。</p>
+  </body>
+</html>

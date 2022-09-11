@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>css 选择器</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>css 选择器</h1>
+    <p>目标：详细学习 css 选择器的工作方式。</p>
+    <h2>什么是选择器</h2>
+    <p>选择器是一种告诉浏览器 HTML 中哪个元素被选中应用响应 css 属性值的方式。</p>
+    <p>被选择的元素叫：选择器的对象</p>
+
+    <hr>
+
+    <h2>选择器列表</h2>
+    <p>可以将具有相同属性，相同属性值的不同选择器组合为选择器列表：</p>
+    <p>将</p>
+    <code><pre>
+      h1 {
+        color: blue;
+      }
+
+      .special {
+        color: blue;
+      }
+    </pre></code>
+    <p>组合为：</p>
+    <code><pre>
+      h1, .special {
+        color: blue;
+      }
+    </pre></code>
+    <hr>
+    <h2>选择器的种类</h2>
+    <ul>
+      <li>元素选择器：h1 </li>
+      <li>类选择器：.className</li>
+      <li>id 选择器：#id</li>
+      <li>标签属性选择器：</li>
+      <code><pre>
+        a[title] { } /*若 a 有属性 title 则被选中*/
+        a[href="https://example.com"] { } /*若 a 的 href 属性的值为 https://example.com 则被选中*/
+      </pre></code>
+      <li>伪类：a:hover 当 a 的状态为 指针悬浮在其上 时被选中</li>
+      <li>伪元素：p::first-line 段落的第一行被选中</li>
+    </ul>
+    <table>
+      <tr>
+        <th>选择器</th>
+        <th>示例</th>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Type_selectors">类型选择器</a></td>
+        <td>h1 {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Universal_selectors">通配选择器</a></td>
+        <td>*</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Class_selectors">类选择器</a></td>
+        <td>.box {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/ID_selectors">id 选择器</a></td>
+        <td>#unique {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">标签属性选择器</a></td>
+        <td>a[title] {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes">伪类选择器</a></td>
+        <td>a:hover {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素选择器</a></td>
+        <td>p::first-line {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Descendant_combinator">后代选择器</a></td>
+        <td>article p {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Child_combinator">子代选择器</a></td>
+        <td>article &gt; p {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator">相邻兄弟选择器</a></td>
+        <td>h1 + p {}</td>
+      </tr>
+      <tr>
+        <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/General_sibling_combinator">通用兄弟选择器</a></td>
+        <td>h1 ~ p {}</td>
+      </tr>
+    </table>
+  </body>
+</html>

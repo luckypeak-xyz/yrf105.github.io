@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>创建超链接</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>创建超链接</h1>
+  <h2 id="what_is_a_hyperlink">什么是超链接？</h2>
+  <p>几乎任何网络内容都可以转换为超链接，点击超链接将会使网络浏览器转到另一个网址（URL）。</p>
+  <p>URL 可以指向网络上保存的任何内容，如果浏览器不知道如何打开，会询问你使用本地的其他程序打开。</p>
+
+  <hr>
+
+  <h2>链接的解析</h2>
+
+  <h3>基本链接</h3>
+  <p>一个指向<a href="https://github.com/"> Github 的链接</a>。</p>
+
+
+  <h3>补充信息——title 属性</h3>
+  <p>一个指向<a href="https://github.com/" title="软件代码管理服务平台"> Github 的链接</a>。</p>
+
+  <hr>
+
+  <h2>URL 和 path</h2>
+  <p>URL 统一资源定位符是一个定义了在网路上的位置的一个字符串。</p>
+  <p>URL 通过路径查找文件。</p>
+  <ul>
+    <li><a href="hello.html">指向当前目录中的文件。</a></li>
+    <li><a href="subfolder/subfolder.html">指向子目录中的文件。</a></li>
+    <li>指向上级目录中的文件。（点击上一条查看。）</li>
+  </ul>
+
+  <h3>文档片段</h3>
+  <p>超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为文档片段）。要做到这一点，你必须首先给要链接到的元素分配一个 id 属性。</p>
+  <ol>
+    <li><a href="subfolder/subfolder.html#p1">链接到其他文档的指定部分。-> subfolder/subfolder.html p1</a></li>
+    <li><a href="#what_is_a_hyperlink">链接当当前文档的特定部分 -> 什么是超链接？</a></li>
+  </ol>
+
+  <h3>绝对 URL 和相对 URL</h3>
+  <ul>
+    <li>不管绝对 URL 在哪里使用，总是指向确定的位置。</li>
+    <li>会因为文件的移动而失效。</li>
+  </ul>
+
+  <hr>
+
+  <h2>链接最佳实践</h2>
+  <h3>使用清晰地链接措辞</h3>
+  <p>要：</p>
+  <ul>
+    <li>在链接文本中包含关键词。</li>
+    <li>创建描述性链接。</li>
+  </ul>
+  <p>不要：</p>
+  <ul>
+    <li>不要重复 URL 作为链接文本的一部分。</li>
+    <li>不要在链接文本中说“链接”或“链接到”。</li>
+    <li>不要创建过长的链接标签。</li>
+    <li>不要让相同的多个副本链接到不同地方。</li>
+  </ul>
+
+  <h3>链接到非 HTML 资源——留下清晰地提示</h3>
+  <p><a href="https://www.example.com/large-report.pdf">
+      下载销售报告（PDF, 10MB）
+    </a></p>
+
+  <p><a href="https://www.example.com/video-stream/" target="_blank">
+      观看视频（将在新标签页中播放，HD 画质）
+    </a></p>
+
+  <p><a href="https://www.example.com/car-game">
+      进入汽车游戏（需要 Flash 插件）
+    </a></p>
+
+  <h3>在下载链接中使用 download 属性</h3>
+  <p>当你链接到要下载的资源而不是在浏览器中打开时，你可以使用 download 属性来提供一个默认的保存文件名。</p>
+  <hr>
+
+  <h2>电子邮件链接</h2>
+  <pre>
+    &lt;a
+    href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"&gt;
+    Send mail with cc, bcc, subject and body
+    &lt;/a&gt;
+  </pre>
+  <p>其中：</p>
+  <ul>
+    <li>mailto - 打开邮件客户端</li>
+    <li>subject - 主题</li>
+    <li>cc - 抄送</li>
+    <li>body - 主体</li>
+  </ul>
+  <p>每个字段都必须是 URL 编码的。</p>
+</body>
+
+</html>

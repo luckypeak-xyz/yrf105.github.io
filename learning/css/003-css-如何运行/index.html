@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS 如何运行</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>CSS 如何运行</h1>
+    <p>浏览器是如何获取 HTML 和 CSS 并将他们加载成网页的呢？</p>
+    <h2>浏览器究竟是如何运行的？</h2>
+    <p><img src="images/rendering.svg"></p>
+    <hr>
+    <h2>关于 DOM</h2>
+    <p>一个 DOM 有一个树形结构，标记语言中的每一个元素、属性以及每一段文字都对应着结构树中的一个节点（Node/DOM 或 DOM node）。节点由节点本身和其他 DOM 节点的关系定义，有些节点有父节点，有些节点有兄弟节点（同级节点）。</p>
+    <hr>
+    <h2>一个真实的 DOM 案例</h2>
+    <p>如下代码：</p>
+    <code><pre>
+      &lt;p&gt;
+        Let's use:
+        &lt;span&gt;Cascading&lt;/span&gt;
+        &lt;span&gt;Style&lt;/span&gt;
+        &lt;span&gt;Sheets&lt;/span&gt;
+      &lt;/p&gt;
+    </pre></code>
+    对应的 DOM 为：
+    <code><pre>
+      P
+      ├─ "Let's use:"
+      ├─ SPAN
+      |  └─ "Cascading"
+      ├─ SPAN
+      |  └─ "Style"
+      └─ SPAN
+          └─ "Sheets"
+    </pre></code>
+    <hr>
+    <h2>应用 CSS 到 DOM</h2>
+    <p>浏览器会解析 HTML 并创造一个 DOM，然后解析 CSS。把规则应用到对应的元素上并渲染图像到屏幕。</p>
+    <hr>
+    <h2>当浏览器遇到无法解析的 CSS 代码时会发生什么？</h2>
+    <p>直接忽略！</p>
+  </body>
+</html>
