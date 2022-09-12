@@ -3,13 +3,37 @@
   margin: 0;
 }
 
+body {
+  --text-color: #eee;
+  --bkg-color: #001f3f;
+}
+
+body.light-theme {
+  --text-color: #222;
+  --bkg-color: #fff;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bkg-color);
+}
+
+.btn-toggle {
+  padding: 5px;
+  margin: 2px 2px;
+  text-align: center;
+  float: right;
+  border-radius: 2em;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
 }
 
-a:link, a:visited {
-  background-color: #6A5ACD;
+a:link,
+a:visited {
+  background-color: #6a5acd;
   color: white;
   padding: 10px;
   margin: 2px 2px;
@@ -18,7 +42,7 @@ a:link, a:visited {
   flex: 200px;
 }
 
-a:hover, a:active {
-  background-color: #4169E1;
+a:hover,
+a:active {
+  background-color: #4169e1;
 }
-
